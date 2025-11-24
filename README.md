@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Secret Santa Generator
+
+A modern, user-friendly Secret Santa assignment generator built with Next.js and TypeScript. This app helps you organize your Secret Santa exchange with intelligent assignment generation, email sending capabilities, and historical tracking to avoid repeat matches.
+
+## Features
+
+- **Participant Management**: Add, edit, and remove participants with names and email addresses
+- **Smart Assignment Algorithm**: Generates assignments with multiple constraints:
+  - No self-assignment
+  - Respects exclusion pairs (e.g., spouses, roommates)
+  - Avoids repeat matches from the last 2 years
+- **Year Management**: Auto-detects current year with manual override option
+- **Historical Tracking**: Stores previous years' assignments in browser LocalStorage
+- **CSV Import/Export**:
+  - Import previous year assignments
+  - Download current year assignments as CSV
+- **Email Integration**: Send assignment emails via EmailJS service
+- **Temporary Storage**: Work in draft mode until you're ready to save permanently
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.x or higher
+- npm or yarn package manager
+
+### Installation
+
+1. Clone or download this repository
+
+2. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## EmailJS Setup
 
-## Learn More
+To send assignment emails, you need to set up EmailJS:
 
-To learn more about Next.js, take a look at the following resources:
+1. Go to [EmailJS](https://www.emailjs.com/) and create a free account
+2. Create an email service (Gmail, Outlook, etc.)
+3. Create an email template with these variables:
+   - `{{to_name}}` - Recipient's name (the person receiving the email)
+   - `{{to_email}}` - Recipient's email
+   - `{{recipient_name}}` - The person they should buy a gift for
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example template:
+```
+Hi {{to_name}},
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You are the Secret Santa for: {{recipient_name}}
 
-## Deploy on Vercel
+Happy gifting!
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Get your credentials:
+   - Service ID
+   - Template ID
+   - Public Key
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Enter these credentials in the app when prompted
+
+## Usage
+
+### Basic Workflow
+
+1. **Set the Year**: The app auto-detects the current year, or you can override it
+2. **Add Participants**: Enter names and email addresses for all participants
+3. **Define Exclusion Pairs** (optional): Specify pairs who shouldn't be matched
+4. **Import Previous Years** (optional): Upload CSV files from previous years to avoid repeat matches
+5. **Generate Assignments**: Click to create random assignments respecting all constraints
+6. **Review**: Check the generated assignments
+7. **Send Emails**: Send assignment emails to all participants via EmailJS
+8. **Save to CSV**: Download and permanently save the assignments
+
+### Data Storage
+
+- **Temporary Storage**: Participants and exclusion pairs are stored in browser LocalStorage until you clear them
+- **Permanent Storage**: Year assignments are saved to LocalStorage only when you click "Save to CSV"
+- **CSV Downloads**: Assignments are downloaded to your computer for backup
+
+### CSV Format
+
+The app uses the following CSV format:
+```csv
+Year,Giver Name,Giver Email,Recipient Name,Recipient Email
+2024,John Doe,john@example.com,Jane Smith,jane@example.com
+2024,Jane Smith,jane@example.com,Bob Johnson,bob@example.com
+```
+
+## Project Structure
+
+```
+/app
+  /page.tsx           # Main application page
+  /layout.tsx         # Root layout
+/components
+  /ParticipantForm.tsx    # Add/edit participants
+  /ExclusionManager.tsx   # Manage exclusion pairs
+  /AssignmentViewer.tsx   # Display generated assignments
+  /YearSelector.tsx       # Year selection and historical data
+/lib
+  /secretSanta.ts         # Assignment generation algorithm
+  /storage.ts             # LocalStorage utilities
+  /csvHandler.ts          # CSV import/export
+  /emailService.ts        # EmailJS integration
+/types
+  /index.ts               # TypeScript interfaces
+```
+
+## Technologies Used
+
+- **Next.js 14+**: React framework
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first styling
+- **EmailJS**: Email sending service
+- **Papa Parse**: CSV parsing library
+- **LocalStorage**: Browser-based data persistence
+
+## Algorithm Details
+
+The Secret Santa assignment algorithm uses a backtracking approach to find valid assignments:
+
+1. Shuffles participants randomly
+2. Attempts to assign each giver to a recipient
+3. Validates each assignment against:
+   - Self-assignment (not allowed)
+   - Exclusion pairs (not allowed)
+   - Historical data (no repeats within 2 years)
+4. Retries up to 1000 times if constraints cannot be satisfied
+5. Returns error if no valid assignment is possible
+
+## Browser Compatibility
+
+Requires a modern browser with support for:
+- ES6+ JavaScript
+- LocalStorage API
+- Fetch API
+
+## License
+
+This project is open source and available for personal use.
+
+## Support
+
+For issues or questions, please create an issue in the repository.

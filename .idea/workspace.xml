@@ -4,11 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46b8b892-f5d9-4bce-9b0b-df552a7a23c8" name="Changes" comment="" />
+    <list default="true" id="46b8b892-f5d9-4bce-9b0b-df552a7a23c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/betterCommentsSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/christmas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSV_IMPORT_GUIDE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EMAILJS_SETUP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MERGE_BEHAVIOR.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PREVIOUS_YEAR_CSV_FORMAT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TROUBLESHOOTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WISHLIST_CSV_FORMAT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/AssignmentViewer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ExclusionManager.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ParticipantForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/YearSelector.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/2024_Assignments.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/2024_Assignments.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example-2024-assignments.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/csvHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/emailService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/secretSanta.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/storage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Christmas Wish List.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/Christmas Wish List.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/email-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/email-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/old-email-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/data/old-email-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -24,19 +61,33 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/katyalait/Projects/christmas&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/katyalait/Projects/christmas/data&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/katyalait/Projects/christmas/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="untrusted" />
       <option name="ENV_FILES" value="" />
@@ -60,6 +111,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -76,7 +137,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763368713279</updated>
-      <workItem from="1763368714443" duration="1521000" />
+      <workItem from="1763368714443" duration="17557000" />
+      <workItem from="1763649725208" duration="4252000" />
+      <workItem from="1763917919698" duration="1888000" />
     </task>
     <servers />
   </component>
